@@ -54,11 +54,11 @@ namespace GenericCalculatorTest
         [TestCase(78, 9, 8.6669)]
 
         
-        public void Should_Divide_Two_Numbers<T>(T input1, T input2, double expected)
+        public void Should_Divide_Two_Numbers<T>(T input1, T input2, double expec)
         {
             double actual = Calculator.Calculate("d", input1, input2);
             
-            Assert.That(actual, Is.EqualTo(expected).Within(.0005));
+            Assert.That(expec, Is.EqualTo(actual).Within(.0005));
 
         }
         [Test]

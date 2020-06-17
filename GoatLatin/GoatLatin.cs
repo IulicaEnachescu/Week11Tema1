@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,11 +18,14 @@ namespace GoatLatin
                 StringBuilder goatLatin = new StringBuilder();
                 for (int i = 0; i < words.Length; i++)
                 {
+                    //string numericPhone = new String(phone.Where(Char.IsDigit).ToArray());
 
                     if (StartWithVowel(words[i]))
                     {
                         goatLatin.Append(words[i]);
+                       
                     }
+                    
                     else
                     {
                         goatLatin.Append(words[i].Substring(1));
